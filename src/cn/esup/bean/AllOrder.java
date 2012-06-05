@@ -10,98 +10,120 @@ import org.nutz.dao.entity.annotation.*;
 public class AllOrder {
 
 	/**
-	 * 
+	 * ID
 	 */
 	@Id
 	@Column("ID")
 	private Integer id;
+	
 	/**
-	 * 
+	 * 订单类型 填写:ESUP.CN
 	 */
 	@Column("deal_type")
 	private String dealType;
+	
 	/**
-	 * 
+	 * 订单ID
 	 */
 	@Column("deal_id")
 	private String dealId;
+	
 	/**
-	 * 
+	 * 区服名
 	 */
 	@Column("deal_region")
 	private String dealRegion;
+	
 	/**
-	 * 
+	 * 收货角色名称
 	 */
 	@Column("deal_name")
 	private String dealName;
+	
 	/**
-	 * 
+	 * 收货角色等级
 	 */
 	@Column("deal_grade")
 	private Integer dealGrade;
+	
 	/**
-	 * 
+	 * 游戏币数量
 	 */
 	@Column("deal_money")
 	private Integer dealMoney;
+	
 	/**
-	 * 
+	 * 订单总价
 	 */
 	@Column("pricetotal")
 	private String pricetotal;
+	
 	/**
-	 * 
+	 * 订单供货单价
 	 */
 	@Column("pricein")
 	private Long pricein;
+	
 	/**
-	 * 
+	 * 订单单价
 	 */
 	@Column("price")
 	private Long price;
+	
 	/**
-	 * 
+	 * 生成订单时间
 	 */
 	@Column("inputtime")
 	private java.util.Date inputtime;
+	
 	/**
-	 * 
+	 * 完成订单时间
 	 */
 	@Column("finishtime")
 	private java.util.Date finishtime;
+	
 	/**
-	 * 
+	 * 订单状态 
+	 * 1.正在处理
+	 * 2.交易成功
+	 * 3.交易失败
+	 * 4.订单挂起
 	 */
 	@Column("flag")
 	private Integer flag;
+	
 	/**
-	 * 
+	 * 订单状态描述
 	 */
 	@Column("order_status")
 	private String orderStatus;
+	
 	/**
-	 * 
+	 * 对方联系方式 默认是QQ
 	 */
 	@Column("service_qq")
 	private String serviceQq;
+	
 	/**
-	 * 
+	 * 接手人QQ 填写:412517067
 	 */
 	@Column("accept_qq")
 	private String acceptQq;
+	
 	/**
-	 * 
+	 * 接手人 填写:admin
 	 */
 	@Column("accept_user")
 	private String acceptUser;
+	
 	/**
-	 * 
+	 * 接手客服 填写:412517067
 	 */
 	@Column("accept_kefu")
 	private String acceptKefu;
+	
 	/**
-	 * 
+	 * 不知道干嘛的, 看全表都为null
 	 */
 	@Column("left_money")
 	private Integer leftMoney;

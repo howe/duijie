@@ -12,71 +12,90 @@ public class WtKucun {
 	/**
 	 * DNF网通区库存表
 	 */
+	
+	/**
+	 * ID
+	 */
 	@Id
 	@Column("ID")
 	private Integer id;
+	
 	/**
-	 * 
+	 * 供应ID
 	 */
 	@Column("supplyid")
 	private String supplyid;
+	
 	/**
-	 * 
+	 * 区服名
 	 */
 	@Column("region")
 	private String region;
+	
 	/**
-	 * 
+	 * 当日已售量
 	 */
 	@Column("sumsold")
 	private Integer sumsold;
+	
 	/**
-	 * 
+	 * 当日可售量
 	 */
 	@Column("sumleftsell")
 	private Integer sumleftsell;
+	
 	/**
-	 * 
+	 * 库存
 	 */
 	@Column("sumreserve")
 	private Integer sumreserve;
+	
 	/**
-	 * 
+	 * 本期最大销售上限
 	 */
 	@Column("summaxsell")
 	private Integer summaxsell;
+	
 	/**
-	 * 
+	 * 进货价
 	 */
 	@Column("pricein")
 	private Long pricein;
+	
 	/**
-	 * 
+	 * 出货价
 	 */
 	@Column("priceout")
 	private Long priceout;
+	
 	/**
-	 * 
+	 * 卖淘宝价格
 	 */
 	@Column("pricetaobao")
 	private Long pricetaobao;
+	
 	/**
-	 * 
+	 * 区服ID, 应该是对应1771平台的
 	 */
 	@Column("serverid")
 	private String serverid;
+	
 	/**
-	 * 
+	 * 是否可买
+	 * 1.是
+	 * 0.否
 	 */
 	@Column("whether_sell")
 	private Integer whetherSell;
+	
 	/**
-	 * 
+	 * 销售状态
 	 */
 	@Column("sell_status")
 	private String sellStatus;
+	
 	/**
-	 * 
+	 * 不知道干嘛的
 	 */
 	@Column("flag")
 	private Integer flag;
