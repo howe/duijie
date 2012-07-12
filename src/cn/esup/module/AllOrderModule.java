@@ -16,7 +16,7 @@ import org.nutz.log.Logs;
 import cn.esup.bean.AllOrder;
 
 @At("/AllOrder")
-@IocBean(fields={"dao"})
+@IocBean(fields={"dao1"})
 public class AllOrderModule extends EntityService<AllOrder>{
 
     private static final Log log = Logs.get();
