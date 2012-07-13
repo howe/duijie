@@ -1,14 +1,18 @@
-package cn.esup.bean;
+package com.esup.bean;
 
 import org.nutz.dao.entity.annotation.*;
 
 /**
-* DNF电信区库存表
+* 
 */
-@Table("dx_kucun")
+@Table("wt_kucun")
 @PK({"id"})
-public class DxKucun {
+public class WtKucun {
 
+	/**
+	 * DNF网通区库存表
+	 */
+	
 	/**
 	 * ID
 	 */

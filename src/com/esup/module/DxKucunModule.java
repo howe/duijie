@@ -1,4 +1,4 @@
-package cn.esup.module;
+package com.esup.module;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,11 +13,11 @@ import org.nutz.service.EntityService;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 
-import cn.esup.bean.AllOrder;
+import com.esup.bean.DxKucun;
 
-@At("/AllOrder")
-@IocBean(fields={"dao1"})
-public class AllOrderModule extends EntityService<AllOrder>{
+@At("/DxKucun")
+@IocBean(fields={"dao"})
+public class DxKucunModule extends EntityService<DxKucun>{
 
     private static final Log log = Logs.get();
 	
@@ -26,10 +26,10 @@ public class AllOrderModule extends EntityService<AllOrder>{
 		if (rows < 1)
 			rows = 10;
 		Pager pager = dao().createPager(page, rows);
-		List<AllOrder> list = dao().query(AllOrder.class, null, pager);
+		List<DxKucun> list = dao().query(DxKucun.class, null, pager);
 		Map<String, Object> map = new HashMap<String, Object>();
 		if (pager != null) {
-			pager.setRecordCount(dao().count(AllOrder.class));
+			pager.setRecordCount(dao().count(DxKucun.class));
 			map.put("pager", pager);
 		}
 		map.put("list", list);
@@ -37,7 +37,7 @@ public class AllOrderModule extends EntityService<AllOrder>{
 	}
 	
 	@At
-	public boolean add(@Param("..") AllOrder obj){
+	public boolean add(@Param("..") DxKucun obj){
 		try{
 			dao().insert(obj);
 			return true;
@@ -49,7 +49,7 @@ public class AllOrderModule extends EntityService<AllOrder>{
 	}
 	
 	@At
-	public boolean delete(@Param("..") AllOrder obj){
+	public boolean delete(@Param("..") DxKucun obj){
 		try{
 			dao().delete(obj);
 			return true;
@@ -61,7 +61,7 @@ public class AllOrderModule extends EntityService<AllOrder>{
 	}
 	
 	@At
-	public boolean update(@Param("..") AllOrder obj){
+	public boolean update(@Param("..") DxKucun obj){
 		try{
 			dao().update(obj);
 			return true;

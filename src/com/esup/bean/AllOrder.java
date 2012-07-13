@@ -1,4 +1,4 @@
-package cn.esup.bean;
+package com.esup.bean;
 
 import org.nutz.dao.entity.annotation.*;
 

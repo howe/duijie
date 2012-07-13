@@ -1,4 +1,4 @@
-package cn.esup.module;
+package com.esup.module;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,11 +13,11 @@ import org.nutz.service.EntityService;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 
-import cn.esup.bean.DxKucun;
+import com.esup.bean.WtKucun;
 
-@At("/DxKucun")
+@At("/WtKucun")
 @IocBean(fields={"dao"})
-public class DxKucunModule extends EntityService<DxKucun>{
+public class WtKucunModule extends EntityService<WtKucun>{
 
     private static final Log log = Logs.get();
 	
@@ -26,10 +26,10 @@ public class DxKucunModule extends EntityService<DxKucun>{
 		if (rows < 1)
 			rows = 10;
 		Pager pager = dao().createPager(page, rows);
-		List<DxKucun> list = dao().query(DxKucun.class, null, pager);
+		List<WtKucun> list = dao().query(WtKucun.class, null, pager);
 		Map<String, Object> map = new HashMap<String, Object>();
 		if (pager != null) {
-			pager.setRecordCount(dao().count(DxKucun.class));
+			pager.setRecordCount(dao().count(WtKucun.class));
 			map.put("pager", pager);
 		}
 		map.put("list", list);
@@ -37,7 +37,7 @@ public class DxKucunModule extends EntityService<DxKucun>{
 	}
 	
 	@At
-	public boolean add(@Param("..") DxKucun obj){
+	public boolean add(@Param("..") WtKucun obj){
 		try{
 			dao().insert(obj);
 			return true;
@@ -49,7 +49,7 @@ public class DxKucunModule extends EntityService<DxKucun>{
 	}
 	
 	@At
-	public boolean delete(@Param("..") DxKucun obj){
+	public boolean delete(@Param("..") WtKucun obj){
 		try{
 			dao().delete(obj);
 			return true;
@@ -61,7 +61,7 @@ public class DxKucunModule extends EntityService<DxKucun>{
 	}
 	
 	@At
-	public boolean update(@Param("..") DxKucun obj){
+	public boolean update(@Param("..") WtKucun obj){
 		try{
 			dao().update(obj);
 			return true;

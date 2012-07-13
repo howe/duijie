@@ -1,4 +1,4 @@
-package cn.esup.module;
+package com.esup.module;
 
 import java.io.File;
 import java.io.IOException;
